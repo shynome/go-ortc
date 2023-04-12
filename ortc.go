@@ -58,10 +58,10 @@ func HandleConnect(pc *webrtc.PeerConnection, offer Signal) (roffer Signal, err 
 	return
 }
 
-func Handshake(pc *webrtc.PeerConnection, offer Signal) (err error) {
+func Handshake(pc *webrtc.PeerConnection, roffer Signal) (err error) {
 	defer err2.Handle(&err)
 
-	try.To(pc.SetRemoteDescription(webrtc.SessionDescription(offer)))
+	try.To(pc.SetRemoteDescription(webrtc.SessionDescription(roffer)))
 
 	return
 }
